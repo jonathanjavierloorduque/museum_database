@@ -1,5 +1,5 @@
 <?php
-$url_base = "http://localhost/phpcode/APP/";
+$url_base = "http://localhost/phpcode/museum_database/";
 ?>
 <!doctype html>
 <html lang="en">
