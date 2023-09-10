@@ -1,3 +1,5 @@
+
+
 <?php include("../../templates/header.php"); ?>
 Lista de recolecciones
 <div class="card">

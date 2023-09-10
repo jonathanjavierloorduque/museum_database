@@ -1,3 +1,15 @@
+/*conectar a la base de datos*/
+<?php include("../../bd.php"); 
+$sentencia=$conexion->prepare("SELECT * FROM `objeto`");
+$sentencia->execute();
+$listaobjeto=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+
+
+/*print_r($listaobjeto);*/
+?>
+
+
+
 <?php include("../../templates/header.php"); ?>
 
 <br/>
@@ -37,6 +49,8 @@
                 </tr>
             </thead>
             <tbody>
+            
+            <?php foreach($listaobjeto as $registro){ ?>
                 <tr class="">
                     <td scope="row"><a name="" id="" class="btn btn-primary" href="#" role="button">Informe</a>
                     |<a name="" id="" class="btn btn-info" href="#" role="button">Editar</a>
@@ -44,6 +58,8 @@
                     <td>New</td>
                     <td>R1C3</td>
                 </tr>
+                <?php }?>
+                
             </tbody>
         </table>
        </div>
